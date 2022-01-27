@@ -1,6 +1,6 @@
 # README
 
-This is a basic Rails API, there is no Rails front-end here.
+This is a basic REST Rails API, there is no Rails front-end here.
 
 Things you may want to cover:
 
