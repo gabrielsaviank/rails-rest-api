@@ -1,5 +1,11 @@
+# frozen_string_literal: true
 class ArticlesController < ApplicationController
   def index
-    render json: {}
+    articles = Article.recent
+    render json: serializer.new(articles), status: :ok
+  end
+
+  def serializer
+    ArticleSerializer
   end
 end

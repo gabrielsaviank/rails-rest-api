@@ -36,6 +36,7 @@ group :development do
   gem 'spring'
   gem 'rspec-rails', '~> 4.0.1'
   gem 'factory_bot_rails'
+  gem 'jsonapi-serializer'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
