@@ -22,5 +22,14 @@ RSpec.describe ArticlesController do
         )
       end
     end
+
+    it 'returns articles in the proper order' do
+      recent_article = create(:article)
+      older_article =
+        create(:article, created_at: 1.hour.ago)
+      get '/articles'
+      ids = json.data.map { |item| item[:id].to_i }
+      expect(ids).to eq([recent_article.id, older_article.id])
+    end
   end
 end
